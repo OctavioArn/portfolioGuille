@@ -6,69 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
 </head>
-<header class="bg-stone-400">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div class="flex lg:flex-1">
-            <a href="./index.html" class="-m-1.5 p-1.5">
-                <img class="w-4/5 rounded-2xl" src="../img/logo1.png" alt="logo">
-            </a>
-        </div>
-        </div>
-        <div class="flex lg:hidden">
-            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                <span class="sr-only">Open main menu</span>
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                    aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-            </button>
-        </div>
-        <div class="hidden lg:flex lg:gap-x-12">
-            <a href="./index.html" class="text-sm font-semibold leading-6 text-gray-900 font-sans">Inicio</a>
-            <a href="./aboutMe.html" class="text-sm font-semibold leading-6 text-gray-900 font-sans">Sobre mí</a>
-            <a href="./contact.html" class="text-sm font-semibold leading-6 text-gray-900 font-sans">Contacto</a>
-        </div>
-    </nav>
-    <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden" role="dialog" aria-modal="true">
-        <!-- Background backdrop, show/hide based on slide-over state. -->
-        <div class="fixed inset-0 z-10"></div>
-        <div
-            class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div class="flex items-center justify-between">
-                <a href="#" class="-m-1.5 p-1.5">
-                    <span class="sr-only">Your Company</span>
-                    <img class="h-8 w-auto" src="../img/logo1.png" alt="">
+<body>
+    <header class="bg-cyan-800 font-serif">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div class="flex lg:flex-1">
+                <a href="./index.html" class="-m-1.5 p-1.5">
+                    <img class="w-4/5 rounded-2xl" src="../img/logo1.png" alt="logo">
                 </a>
-                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-                    <span class="sr-only">Close menu</span>
+            </div>
+            </div>
+            <div class="flex lg:hidden">
+                <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Open main menu</span>
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                         aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
                 </button>
             </div>
-            <div class="mt-6 flow-root">
-                <div class="-my-6 divide-y divide-gray-500/10">
-                    <div class="space-y-2 py-6">
-
-                        <a href="./index.html"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-sans">Inicio</a>
-                        <a href="./aboutMe.html"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-sans">Sobre mí</a>
-                        <a href="./contact.html"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-sans">Contacto</a>
+            <div class="hidden lg:flex lg:gap-x-12">
+                <a href="./index.html" class="text-sm font-semibold leading-6 text-gray-900 font-sans">Inicio</a>
+                <a href="#sobreMi" class="text-sm font-semibold leading-6 text-gray-900 font-sans">Sobre mí</a>
+                <a href="#contact" class="text-sm font-semibold leading-6 text-gray-900 font-sans">Contacto</a>
+            </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="lg:hidden" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-0 z-10"></div>
+            <div
+                class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-8 w-auto" src="../img/logo1.png" alt="logo">
+                    </a>
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+    
+                            <a href="./index.html"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-sans">Inicio</a>
+                            <a href="#sobreMi"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-sans">Sobre mí</a>
+                            <a href="#contact"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 font-sans">Contacto</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
-
-<body>
-    <div class="bg-slate-700">
-    <section class="grid grid-cols-2 place-items-center p-10">
+    </header>
+    <section class="grid grid-cols-2 place-items-center p-10 bg-cyan-700 font-serif">
         <div class="grid justify-items-end">
             <img src="../img/fotoperfil.jpg" alt="foto perfil" class="w-1/2 rounded-full pr-3">
         </div>
@@ -83,10 +81,10 @@
             </p>
         </div>
     </section>
-</div>
-        <section>
+    <!-- Apartado con mas informacion y dialogs -->
+        <section class="bg-cyan-700 font-serif">
         <div class="flex flex-col flex-auto p-10">
-            <h1 class="text-4xl font-bold">Un poco sobre mí</h1>
+            <h1 class="text-4xl font-bold" id="sobreMi">Un poco sobre mí</h1>
             <p class="text-2xl">Para un mayor información puede ver mi CV aquí</p>
         </div>
         <div class="grid grid-cols-2 p-10">
@@ -98,34 +96,34 @@
             <div class="p-2">
                 <p class="font-bold">Poder Judicial de la Nacion</p>
                 <p class="text-justify">Trabajo en el Juzgado Federal N°1, secretaria Civil N°1.</p>
-                <button id="show" data-target="modal1" class="underline underline-offset-1">Más información</button>
-                <dialog id="modal" class="bg-stone-400">
-                    <h2>Poder Judicial de la Nacion</h2>
-                    <p>Escribiente Auxiliar (interina) desempeñando mis funciones en la Secretaria Civil N°1 del Juzgado Federal N°1 de Corrientes desde junio del 2019 y hasta la fecha.</p>
-                    <button id="cancel" data-target="modal1">Cerrar</button>
+                <button onclick="window.modal1.show();" class="underline underline-offset-1">Más información</button>
+                <dialog id="modal1" class="w-80 p-6 bg-slate-400 relative">
+                    <h2 class="text-2xl font-bold pb-1">Poder Judicial de la Nacion</h2>
+                    <p class="text-1xl">Escribiente Auxiliar (interina) desempeñando mis funciones en la Secretaria Civil N°1 del Juzgado Federal N°1 de Corrientes desde junio del 2019 y hasta la fecha.</p>
+                    <button class="rounded-md bg-cyan-500 border-solid p-1 border-black border-2" onclick="window.modal1.close();">Cerrar</button>
                 </dialog>
             </div>
             <p class="grid justify-items-end p-2">2019 - Presente</p>
             <div class="p-2">
-                <p class="font-bold ">Jefa de Trabajos Practicos</p>
+                <p class="font-bold">Jefa de Trabajos Practicos</p>
                 <p class="text-justify">Docente universitaria en la materia Procesos Civiles Especiales de la facultad de derecho de la
                     UNNE.</p>
-                    <button id="show" class="underline underline-offset-1">Más información</button>
-                    <dialog id="modal">
-                        <h2>Jefa de Trabajos Practicos</h2>
-                        <p>Designada por concurso en la Cátedra “A” de la asignatura Procesos Civiles Especiales de la Facultad de Derecho, Ciencias Sociales y Políticas de la Universidad Nacional del Nordeste</p>
-                        <button id="cancel">Cerrar</button>
+                    <button onclick="window.modal2.show();" class="underline underline-offset-1">Más información</button>
+                    <dialog id="modal2" class="w-80 p-6 bg-slate-400 relative">
+                        <h2 class="text-2xl font-bold pb-1">Jefa de Trabajos Practicos</h2>
+                        <p class="text-1xl">Designada por concurso en la Cátedra “A” de la asignatura Procesos Civiles Especiales de la Facultad de Derecho, Ciencias Sociales y Políticas de la Universidad Nacional del Nordeste</p>
+                        <button class="rounded-md bg-cyan-500 border-solid p-1 border-black border-2" onclick="window.modal2.close();">Cerrar</button>
                     </dialog>
             </div>
             <p class="grid justify-items-end p-2">2018 - 2020</p>
             <div class="p-2">
                 <p class="font-bold">Profesora Universitaria de Abogacia</p>
                 <p class="text-justify">Titulo de profesora universitaria de abogacia, egresada de la UNNE.</p>
-                <button id="show" class="underline underline-offset-1">Más información</button>
-                <dialog id="modal">
-                    <h2>Profesora Universitaria de Abogacia</h2>
-                    <p>Egresada de la Facultad de Humanidades de la Universidad Nacional del Nordeste, obteniendo el titulo de Profesora en Abogacía</p>
-                    <button id="cancel">Cerrar</button>
+                <button onclick="window.modal3.show();" class="underline underline-offset-1">Más información</button>
+                <dialog id="modal3" class="w-80 p-6 bg-slate-400 relative">
+                    <h2 class="text-2xl font-bold pb-1">Profesora Universitaria de Abogacia</h2>
+                    <p class="text-1xl">Egresada de la Facultad de Humanidades de la Universidad Nacional del Nordeste, obteniendo el titulo de Profesora en Abogacía</p>
+                    <button class="rounded-md bg-cyan-500 border-solid p-1 border-black border-2" onclick="window.modal3.close();">Cerrar</button>
                 </dialog>
             </div>
             <p class="grid justify-items-end p-2">2015 - 2019</p>
@@ -133,28 +131,31 @@
                 <p class="font-bold">Ejercicio de la profesión libre</p>
                 <p class="text-justify">Me desempeñe como abogada en el estudio Ingaramo - Gomez Vara.
                 </p>
-                <button id="show" class="underline underline-offset-1">Más información</button>
-                <dialog id="modal">
-                    <h2>Ejercicio de la profesión libre</h2>
-                    <p>En forma continua desde el año 2015 y hasta el mes de junio de 2019, inscripta en el Colegio Público de Abogados de la Primera Circunscripción de Corrientes Mat. Prof. N°10.490.</p>
-                    <button id="cancel">Cerrar</button>
+                <button onclick="window.modal4.show();" class="underline underline-offset-1">Más información</button>
+                <dialog id="modal4" class="w-80 p-6 bg-slate-400 relative">
+                    <h2 class="text-2xl font-bold pb-1">Ejercicio de la profesión libre</h2>
+                    <p class="text-1xl">En forma continua desde el año 2015 y hasta el mes de junio de 2019, inscripta en el Colegio Público de Abogados de la Primera Circunscripción de Corrientes Mat. Prof. N°10.490.</p>
+                    <button class="rounded-md bg-cyan-500 border-solid p-1 border-black border-2" onclick="window.modal4.close();">Cerrar</button>
                 </dialog>
             </div>
             <p class="grid justify-items-end p-2">2010 - 2014</p>
             <div class="p-2">
                 <p class="font-bold">Abogada</p>
                 <p class="text-justify">Titulo de grado obtenido en la Universidad Nacional del Nordeste.</p>
-                <button id="show" class="underline underline-offset-1">Más información</button>
-                <dialog id="modal">
-                    <h2>Abogada</h2>
-                    <p>Egresada de la Facultad de Derecho y Ciencias Sociales y Políticas de la Universidad Nacional del Nordeste en fecha 18 de diciembre de 2014, obteniendo el título de Abogada.</p>
-                    <button id="cancel">Cerrar</button>
+                <button onclick="window.modal5.show();" class="underline underline-offset-1">Más información</button>
+                <dialog id="modal5" class="w-80 p-6 bg-slate-400 relative">
+                    <h2 class="text-2xl font-bold pb-1">Abogada</h2>
+                    <p class="text-1xl">Egresada de la Facultad de Derecho y Ciencias Sociales y Políticas de la Universidad Nacional del Nordeste en fecha 18 de diciembre de 2014, obteniendo el título de Abogada.</p>
+                    <button class="rounded-md bg-cyan-500 border-solid p-1 border-black border-2" onclick="window.modal5.close();">Cerrar</button>
                 </dialog>
             </div>
         </div>
         </div>
     </section>
-    <footer class="flex flex-row justify-between items-center">
+    <section href="#contacto">
+    </section>
+    <!-- Inicia pie pagina -->
+    <footer class="flex flex-row justify-between items-center bg-cyan-800 font-serif" id="contact">
         <div class="p-4">
             <h4 class="text-2xl font-sans">Email</h4>
             <p class="font-sans">iglesiaguillermina@gmail.com</p>
@@ -165,7 +166,7 @@
         </div>
         <div class="p-4">
             <h4 class="text-2xl font-sans">Linkedin</h4>
-            <a href="https://linkedin.com/in/guillermina-maria-iglesia-b11554129/" class="font-sans">Ver aquí</a>
+            <a href="https://linkedin.com/in/guillermina-maria-iglesia-b11554129/" target="_blank" class="font-sans">Ver aquí</a>
         </div>
         <div class="p-4 font-sans">
             <p class="text-gray-400 font-sans">
@@ -174,6 +175,5 @@
         </div>
     </footer>
 </body>
-<script src="../main.js"></script>
 
 </html>
