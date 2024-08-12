@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+          initial-scale=1.0">
+    <title>Dra. Guillermina Maria Iglesia</title>
+    <link href=
+"https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+          rel="stylesheet">
+          <link rel="Icon" type="image/png" href="./img/favicon.png">
+</head>
+<body>
+    <nav class="bg-blue-800" >
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-24 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button id="hamburguerMenu" type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-blue-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                <svg class="block h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                <svg class="hidden h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start" >
+              <div class="flex flex-shrink-0 items-center">
+                <img class="h-20 w-auto lg:w-ful lg:h-20" src="./img/logo.png" alt="profile picture">
+              </div>
+              <div class="hidden sm:ml-6 sm:block lg:flex">
+                <div class="flex flex-row space-x-4 lg:justify-center lg:items-center">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-blue-500">Inicio</a>
+                  <a href="#sobreMi" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-blue-500">Sobre mí</a>
+                  <a href="#contact" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-blue-500">Contacto</a>
+                </div>
+              </div>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            </div>
+          </div>
+        </div>
+      
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-white" aria-current="page">Inicio</a>
+            <a href="#sobreMi" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white">Sobre mí</a>
+            <a href="#contact" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white">Contacto</a>
+          </div>
+        </div>
+      </nav>
+
+      
+        <!-- Inicio perfil -->
+  <section class="grid grid-cols-2 bg-teal-700 font-sans p-10">
+    <div class="grid justify-items-end lg:justify-items-end">
+        <img src="../img/fotoperfil.jpg" alt="fotoPerfil" class="rounded-full w-full lg:w-64">
+    </div>
+    <div class="justify-items-start pl-3 content-center">
+        <h1 class="font-bold text-2xl pb-1">Dra. Guillermina Maria Iglesia</h1>
+    <h4 class="font-bold text-xl pb-1">Un poco sobre mí</h4>
+    <p class="text-justify">
+        Mi nombre es Guillermina Maria Iglesia, tengo 32 años, soy abogada recibida en la Universidad Nacional del Nordeste, actualmente trabajo en el Juzgado Federal N°1 y soy deocente Universitaria.
+    </p>
+</div>
+</section>
+
+<!-- Actividad laboral -->
+<!-- firts job -->
+<section class="bg-teal-700 font-sans p-10">
+    <div>
+        <h1 class="text-2xl font-bold" id="sobreMi">Mí actividad laboral/eduactiva</h1>
+    </div>
+    <div class="grid grid-cols-2 pt-3">
+      <div>
+          <h3 class="text-3xl font-bold">Educacion y trabajo</h3>
+      </div>
+      <div class="grid grid-cols-2 justify-items-center">
+          <p class="grid justify-items-end p-2">2019 - Presente</p>
+          <div class="p-2">
+              <p class="font-bold">Poder Judicial de la Nacion</p>
+              <p class="text-justify">Trabajo en el Juzgado Federal N°1, secretaria Civil N°1.</p>
+              <button class="underline underline-offset-1" onclick="window.modal1.showModal();" id="showOne">Más información</button>
+              <dialog id="modal1">
+                <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true" >
+                <!--
+                  Background backdrop, show/hide based on modal state.
+              
+                  Entering: "ease-out duration-300"
+                    From: "opacity-0"
+                    To: "opacity-100"
+                  Leaving: "ease-in duration-200"
+                    From: "opacity-100"
+                    To: "opacity-0"
+                -->
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+              
+                <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+                  <div class="flex min-h-full flex-col items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                    <!--
+                      Modal panel, show/hide based on modal state.
+              
+                      Entering: "ease-out duration-300"
+                        From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                        To: "opacity-100 translate-y-0 sm:scale-100"
+                      Leaving: "ease-in duration-200"
+                        From: "opacity-100 translate-y-0 sm:scale-100"
+                        To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    -->
+                    <div class="relative transform overflow-hidden rounded-lg bg-indigo-400 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                      <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                        <div class="sm:flex sm:items-start">
+                          <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                            <h3 class="text-base font-semibold leading-6 text-black-900" id="modal-title">Poder Judicial de la Nacion</h3>
+                            <div class="mt-2">
+                              <p class="text-sm text-black-500">Escribiente Auxiliar (interina) desempeñando mis funciones en la Secretaria Civil N°1 del Juzgado Federal N°1 de Corrientes</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                        <button type="button" id="cancelOne" class="mt-3 inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto" onclick="window.modal1.close();">Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dialog>
+        </div>
+  
+        <!-- Second job -->
+          <p class="grid justify-items-end p-2">2019 - Presente</p>
+          <div class="p-2">
+              <p class="font-bold">Jefa de Trabajos Practicos</p>
+              <p class="text-justify">Docente universitaria en la materia Procesos Civiles Especiales de la
+                  facultad de derecho de la UNNE.</p>
+                  <button class="underline underline-offset-1" onclick="window.modal2.showModal();" id="showTwo">Más información</button>
+                  <dialog id="modal2">
+                    <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true" >
+                    <!--
+                      Background backdrop, show/hide based on modal state.
+                  
+                      Entering: "ease-out duration-300"
+                        From: "opacity-0"
+                        To: "opacity-100"
+                      Leaving: "ease-in duration-200"
+                        From: "opacity-100"
+                        To: "opacity-0"
+                    -->
+                    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+                  
+                    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+                      <div class="flex min-h-full flex-col items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                        <!--
+                          Modal panel, show/hide based on modal state.
+                  
+                          Entering: "ease-out duration-300"
+                            From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                            To: "opacity-100 translate-y-0 sm:scale-100"
+                          Leaving: "ease-in duration-200"
+                            From: "opacity-100 translate-y-0 sm:scale-100"
+                            To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                        -->
+                        <div class="relative transform overflow-hidden rounded-lg bg-indigo-400 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                          <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                            <div class="sm:flex sm:items-start">
+                              <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                                <h3 class="text-base font-semibold leading-6 text-black-900" id="modal-title">Jefa de Trabajos Practicos</h3>
+                                <div class="mt-2">
+                                  <p class="text-sm text-black-500">Designada por concurso en la Cátedra “A” de la asignatura Procesos Civiles Especiales de la Facultad de Derecho, Ciencias Sociales y Políticas de la Universidad Nacional del Nordeste.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                            <button type="button" id="cancelTwo" class="mt-3 inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto" onclick="window.modal2.close();">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </dialog>
+          </div>
+  
+          <!-- third job -->
+          <p class="grid justify-items-end p-2">2018 - 2020</p>
+          <div class="p-2">
+              <p class="font-bold">Profesorado Universitario de Abogacia</p>
+              <p class="text-justify">Titulo de profesora universitaria de abogacia, egresada de la UNNE.</p>
+              <button class="underline underline-offset-1" onclick="window.modal3.showModal();" id="showThree">Más información</button>
+              <dialog id="modal3">
+                <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true" >
+                <!--
+                  Background backdrop, show/hide based on modal state.
+              
+                  Entering: "ease-out duration-300"
+                    From: "opacity-0"
+                    To: "opacity-100"
+                  Leaving: "ease-in duration-200"
+                    From: "opacity-100"
+                    To: "opacity-0"
+                -->
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+              
+                <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+                  <div class="flex min-h-full flex-col items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                    <!--
+                      Modal panel, show/hide based on modal state.
+              
+                      Entering: "ease-out duration-300"
+                        From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                        To: "opacity-100 translate-y-0 sm:scale-100"
+                      Leaving: "ease-in duration-200"
+                        From: "opacity-100 translate-y-0 sm:scale-100"
+                        To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    -->
+                    <div class="relative transform overflow-hidden rounded-lg bg-indigo-400 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                      <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                        <div class="sm:flex sm:items-start">
+                          <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                            <h3 class="text-base font-semibold leading-6 text-black-900" id="modal-title">Profesorado Universitario de Abogacia</h3>
+                            <div class="mt-2">
+                              <p class="text-sm text-black-500">Egresada de la Facultad de Humanidades de la Universidad Nacional del Nordeste, obteniendo el titulo de Profesora en Abogacía.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                        <button type="button" id="cancelThree" class="mt-3 inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto" onclick="window.modal3.close();">Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dialog>
+          </div>
+  
+          <!-- fourth job -->
+          <p class="grid justify-items-end p-2">2015 - 2019</p>
+          <div class="p-2">
+              <p class="font-bold">Ejercicio de la profesión libre</p>
+              <p class="text-justify">Me desempeñe como abogada en el estudio Ingaramo - Gomez Vara.
+              </p>
+              <button class="underline underline-offset-1" onclick="window.modal4.showModal();" id="showFour">Más información</button>
+              <dialog id="modal4">
+                <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true" >
+                <!--
+                  Background backdrop, show/hide based on modal state.
+              
+                  Entering: "ease-out duration-300"
+                    From: "opacity-0"
+                    To: "opacity-100"
+                  Leaving: "ease-in duration-200"
+                    From: "opacity-100"
+                    To: "opacity-0"
+                -->
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+              
+                <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+                  <div class="flex min-h-full flex-col items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                    <!--
+                      Modal panel, show/hide based on modal state.
+              
+                      Entering: "ease-out duration-300"
+                        From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                        To: "opacity-100 translate-y-0 sm:scale-100"
+                      Leaving: "ease-in duration-200"
+                        From: "opacity-100 translate-y-0 sm:scale-100"
+                        To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    -->
+                    <div class="relative transform overflow-hidden rounded-lg bg-indigo-400 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                      <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                        <div class="sm:flex sm:items-start">
+                          <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                            <h3 class="text-base font-semibold leading-6 text-black-900" id="modal-title">Ejercicio de la profesión libre</h3>
+                            <div class="mt-2">
+                              <p class="text-sm text-black-500">En forma continua desde el año 2015 y hasta el mes de junio de 2019, inscripta en el Colegio Público de Abogados de la Primera Circunscripción de Corrientes Mat. Prof. N°10.490.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                        <button type="button" id="cancelFour" class="mt-3 inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto" onclick="window.modal4.close();">Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dialog>
+          </div>
+  
+          <!-- fifth job -->
+          <p class="grid justify-items-end p-2">2010 - 2014</p>
+          <div class="p-2">
+              <p class="font-bold">Abogada</p>
+              <p class="text-justify">Titulo de grado obtenido en la Universidad Nacional del Nordeste.</p>
+              <button class="underline underline-offset-1" onclick="window.modal5.showModal();">Más información</button>
+              <dialog id="modal5">
+                <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true" >
+                <!--
+                  Background backdrop, show/hide based on modal state.
+              
+                  Entering: "ease-out duration-300"
+                    From: "opacity-0"
+                    To: "opacity-100"
+                  Leaving: "ease-in duration-200"
+                    From: "opacity-100"
+                    To: "opacity-0"
+                -->
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+              
+                <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+                  <div class="flex min-h-full flex-col items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                    <!--
+                      Modal panel, show/hide based on modal state.
+              
+                      Entering: "ease-out duration-300"
+                        From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                        To: "opacity-100 translate-y-0 sm:scale-100"
+                      Leaving: "ease-in duration-200"
+                        From: "opacity-100 translate-y-0 sm:scale-100"
+                        To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    -->
+                    <div class="relative transform overflow-hidden rounded-lg bg-indigo-400 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                      <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                        <div class="sm:flex sm:items-start">
+                          <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                            <h3 class="text-base font-semibold leading-6 text-black-900" id="modal-title">Abogada</h3>
+                            <div class="mt-2">
+                              <p class="text-sm text-black-600">Egresada de la Facultad de Derecho y Ciencias Sociales y Políticas de la Universidad Nacional del Nordeste en fecha 18 de diciembre de 2014, obteniendo el título de Abogada.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                        <button type="button" id="cancelFive" class="mt-3 inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto" onclick="window.modal5.close();">Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dialog>
+          </div>
+      </div>
+    </div>
+  </section>
+  <footer class="flex flex-row justify-between items-center bg-blue-800 font-sans" id="contact">
+    <div class="p-2 text-black">
+        <h4 class="text-sm font-bold">Email</h4>
+        <p class="text-sm">iglesiaguillermina@gmail.com</p>
+    </div>
+    <div class="p-2 text-black">
+        <h4 class="text-sm font-bold">Telefono</h4>
+        <p class=" text-sm">(+549) 3794 - 226810</p>
+    </div>
+    <div class="p-2 text-black">
+        <h4 class="text-sm font-bold">Linkedin</h4>
+        <a href="https://linkedin.com/in/guillermina-maria-iglesia-b11554129/" target="_blank" class="text-sm font-sans">Ver
+            aquí</a>
+    </div>
+    <div class="p-2 font-bold text-black">
+        <p class="text-sm">
+            © 2024 By Octavio Arnica.
+        </p>
+    </div>
+  </footer>
+  <script src="./main.js"></script>
+</body>
+
+</html>
